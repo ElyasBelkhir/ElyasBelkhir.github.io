@@ -1,0 +1,31 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    background-color: #333; /* Navbar background color */
+    color: #fff; /* Text color for navbar items */
+    padding: 15px 20px; /* Padding around navbar items */
+    display: flex;
+    justify-content: space-between; /* Align navbar items to left and right */
+    font-weight: bold; /* Bold text for navbar items */
+  }
+  
+  .navbar a {
+    color: #fff; /* Link color */
+    text-decoration: none;
+    margin-right: 20px; /* Spacing between navbar items */
+  }
+  
+  .navbar a:last-child {
+    margin-right: 0; /* Remove margin from the last navbar item */
+  }
