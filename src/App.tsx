@@ -1,9 +1,9 @@
 import { useState } from "react";
-import HomePage from "./Pages/HomePage";
-import Projects from "./Pages/Projects";
+import HomePage from "./Pages/HomePage.js";
+import Projects from "./Pages/Projects.js";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Experience from "./Pages/Experience";
-import Navbar from "./Components/Navbar";
+import Experience from "./Pages/Experience.js";
+import Navbar from "./Components/Navbar.js";
 import './styles/App.css';
 
 

@@ -1,7 +1,7 @@
 import React from "react";
-import ProjectItem from "../Components/ProjectItem";
+import ProjectItem from "../Components/ProjectItem.js";
 import "../styles/Projects.css";
-import { projectList } from "../Helpers/ProjectList";
+import { projectList } from "../Helpers/ProjectList.js";
 
 function Projects() {
   return (

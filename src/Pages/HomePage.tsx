@@ -2,7 +2,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
 import "../styles/HomePage.css";
-import AboutPage from "./AboutPage";
+import AboutPage from "./AboutPage.js";
 function HomePage() {
   return (
     <div
