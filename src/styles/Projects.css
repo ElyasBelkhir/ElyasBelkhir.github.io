@@ -1,0 +1,9 @@
+.project-list{
+  display: flex;
+  justify-content: center;
+}
+
+.ProjectItem {
+  margin: 20px; /* You can adjust this value to control the separation */
+}
+

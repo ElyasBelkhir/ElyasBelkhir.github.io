@@ -6,11 +6,11 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
       <div className="container-fluid">
-      <span className="navbar-brand mb-0 h1">elyasbelkhir.me</span>
+      <span style = {{fontFamily: "Edu SA Beginner", fontSize:"25px"}}>.me</span>
         <div className="links">
           <Link className="navbar-brand" to="/" > Home</Link>
-          <Link className="navbar-brand" to="/about"> About</Link>
-          <Link className="navbar-brand" to="/contact"> Contact</Link>
+          <Link className="navbar-brand" to="/projects"> Projects</Link>
+          <Link className="navbar-brand" to="/experience"> Experience</Link>
         </div>
       </div>
     </nav>

@@ -1,21 +1,21 @@
 import { useState } from "react";
 import HomePage from "./Pages/HomePage";
-import AboutPage from "./Pages/AboutPage";
+import Projects from "./Pages/Projects";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Contact from "./Pages/Contact";
+import Experience from "./Pages/Experience";
 import Navbar from "./Components/Navbar";
 import './styles/App.css';
 
 
 export default function App() {
   return (
-    <div>
+    <div className="">
       <Router>
-      <Navbar/>
+      <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/experience" element={<Experience />} />
         </Routes>
       </Router>
     </div>
