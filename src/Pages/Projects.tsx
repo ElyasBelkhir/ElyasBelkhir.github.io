@@ -5,25 +5,24 @@ import { projectList } from "../Helpers/ProjectList.js";
 
 function Projects() {
   return (
-    <div>
-      <h1 className="flex items-center justify-center flex-col text-center pt-20
-        pb-6 " > My Personal Projects</h1>
+    <div className="container py-5">
+  <h1 className="text-center mb-4">My Personal Projects</h1>
 
-        <div className="project-list">
-          {projectList.map((project) => {
-            return (
-                <div className="ProjectItem">
-              <ProjectItem
-                image={project.image}
-                name={project.name}
-                about={project.about}
-                link ={project.link}
-              ></ProjectItem>
-              </div>
-            );
-          })}
-        </div>
-    </div>
+  <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    {projectList.map((project) => (
+      <div key={project.name} className="col">
+        <ProjectItem
+          image={project.image}
+          name={project.name}
+          about={project.about}
+          link={project.link}
+        />
+      </div>
+    ))}
+  </div>
+</div>
+
+  
   );
 }
 

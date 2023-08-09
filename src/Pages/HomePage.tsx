@@ -23,24 +23,22 @@ function HomePage() {
         Software Engineer
       </h2>
 
-      <div className="container">
-        <div className="row justify-content-left align-items-center">
+      
           <div
-            className="col-md-8 text-start"
+            className="col-md-6 text-start"
             style={{
               fontFamily: "DM Sans",
               fontSize: 30,
               padding: 20,
-              marginLeft: "-125px",
-              
+              marginLeft:"180px"
             }}
           >
             <AboutPage />
           </div>
-          
         
-        </div>
 
+      <div className="container">
+        
         <div
           className="d-flex flex-column justify-content-end align-items-start"
           style={{
