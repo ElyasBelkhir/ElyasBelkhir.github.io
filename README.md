@@ -1,2 +1,4 @@
 # elyasbelkhir.github.io
-My personal website that is under construction!
+Personal Portfolio Website!
+Built with React+Bootstrap
+Created with Vite and Published with GitHub Pages
