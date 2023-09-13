@@ -22,20 +22,16 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-import resume from '../assets/Elyas_Belkhir_Resume.pdf'
+import resume from '../assets/Elyas_Belkhir_resume.pdf'
 import React, { useState } from 'react';
 import { pdfjs, Document, Page } from 'react-pdf';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 import '../styles/pdf.css'
 
 import type { PDFDocumentProxy } from 'pdfjs-dist';
-
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/build/pdf.worker.min.js',
-  import.meta.url,
-).toString();
 
 const options = {
   cMapUrl: '/cmaps/',
@@ -56,9 +52,9 @@ const [file, setFile] = useState<PDFFile>(resume);
     }
   }
 
-  function onDocumentLoadSuccess({ numPages: nextNumPages }: PDFDocumentProxy): void {
-    setNumPages(nextNumPages);
-  }
+  function onDocumentLoadSuccess(document: any) {
+    setNumPages(document.numPages);
+ }
 
   return (
     <div className="Example">
@@ -66,11 +62,13 @@ const [file, setFile] = useState<PDFFile>(resume);
       <div className="Example__container">
        
         <div className="Example__container__document">
-          <Document file={file} onLoadSuccess={onDocumentLoadSuccess} options={options}>
-            {Array.from(new Array(numPages), (el, index) => (
-              <Page key={`page_${index + 1}`} pageNumber={index + 1} />
-            ))}
-          </Document>
+        <Document
+    file={resume}
+    onLoadSuccess={onDocumentLoadSuccess}
+    onError={(error) => console.error("PDF Error:", error)}
+>
+    <Page pageNumber={numPages} />
+</Document>
         </div>
       </div>
     </div>
